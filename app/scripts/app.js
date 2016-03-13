@@ -17,7 +17,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   // Sets app default base URL
   app.baseUrl = '/';
-  if (window.location.port === '') {  // if production
+  // If on github.io
+  if (window.location.hostname.indexOf('github.io') !== -1) {
     app.baseUrl = '/idles/';
   }
 
