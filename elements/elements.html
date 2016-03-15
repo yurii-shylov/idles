@@ -9568,7 +9568,7 @@ this.fire('dom-change');
     },
 
     observers: [
-      '_updateSelected(selectedValues)'
+      '_updateSelected(selectedValues.splices)'
     ],
 
     /**
@@ -15239,6 +15239,16 @@ context. You should place this element as a child of `<body>` whenever possible.
           noCancelOnOutsideClick: {
             type: Boolean,
             value: true
+          },
+
+          /**
+           * Overridden from `IronOverlayBehavior`.
+           * Set to true to disable auto-focusing the toast or child nodes with
+           * the `autofocus` attribute` when the overlay is opened.
+           */
+          noAutoFocus: {
+            type: Boolean,
+            value: true
           }
         },
 
@@ -16795,12 +16805,10 @@ module.exports = Array.isArray || function (arr) {
 
     // Middleware
     function scrollToTop(ctx, next) {
-      app.scrollPageToTop();
       next();
     }
 
     function closeDrawer(ctx, next) {
-      app.closeDrawer();
       next();
     }
 
