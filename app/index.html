@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="Polymer Starter Kit">
   <title>Polymer Starter Kit</title>
+  <base>/</base>
 
   <!-- Place favicon.ico in the `app/` directory -->
 
@@ -46,22 +47,22 @@
 
         <!-- Drawer Content -->
         <paper-menu attr-for-selected="data-route" selected="[[route]]">
-          <a data-route="home" href="{{baseUrl}}">
+          <a data-route="home" href="./">
             <iron-icon icon="home"></iron-icon>
             <span>Home</span>
           </a>
 
-          <a data-route="users" href="{{baseUrl}}users">
+          <a data-route="users" href="./users">
             <iron-icon icon="info"></iron-icon>
             <span>Users</span>
           </a>
 
-          <a data-route="contact" href="{{baseUrl}}#!/contact">
+          <a data-route="contact" href="./contact">
             <iron-icon icon="mail"></iron-icon>
             <span>Contact</span>
           </a>
 
-          <a data-route="books" href="{{baseUrl}}books">
+          <a data-route="books" href="./books">
             <iron-icon icon="book"></iron-icon>
             <span>Books</span>
           </a>
