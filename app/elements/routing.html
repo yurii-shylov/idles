@@ -2,6 +2,10 @@
 <script>
   window.addEventListener('WebComponentsReady', function() {
 
+    if (!app) {
+      return;
+    }
+
     // Removes end / from app.baseUrl which page.base requires for production
     if (window.location.port === '') {
       page.base(app.baseUrl.replace(/\/$/, ''));
@@ -44,6 +48,10 @@
 
     page('/books', function () {
       app.route = 'books';
+    });
+
+    page('/play', function () {
+      app.route = 'play';
     });
 
     // 404
